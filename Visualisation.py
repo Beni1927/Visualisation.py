@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Mar  4 14:21:39 2023
-
-@author: hp
+@author: beni vimal ravichandran
 """
 
 import pandas as pd
@@ -27,6 +26,21 @@ df
 ax=df.plot(x='year', y =['UK','Switzerland','Denmark','Canada'])
 
 def line():
+    """
+    Plot Line graph for the given data
+
+    Parameters
+    ----------
+    y: float
+    x: float
+    colors: default: :rc:'lines.color'
+    linestyles: 'solid'
+    label: str
+
+    Returns
+    -------
+    'matplotlib.pyplot.plot'
+    """
     plt.xlabel('Year')
     plt.ylabel('Population')
     plt.title('Population Trends')
@@ -34,6 +48,20 @@ def line():
     plt.show()
 
 def bar():
+    """
+    Plot bar graph for the given data
+
+    Parameters
+    ----------
+    y: float
+    x: object
+    colors: default: :rc:'bars.color'
+    label: str
+
+    Returns
+    -------
+    'matplotlib.pyplot.bar'
+    """
     plt.xlabel('Country')
     plt.ylabel('Forest Area')
     plt.title('Forest Area Coverage')
@@ -41,6 +69,20 @@ def bar():
         width = 0.4)
 
 def scatter():
+    """
+    Plots a Scatter plot for the given data
+
+    Parameters
+    ----------
+    y: float
+    x: float
+    colors: default: :rc:'lines.color'
+    label: str
+
+    Returns
+    -------
+    'matplotlib.pyplot.scatter'
+    """
     df.plot.scatter(x='year',y='Migrant')
     plt.xlabel('Year')
     plt.ylabel('Number of Migrants')
